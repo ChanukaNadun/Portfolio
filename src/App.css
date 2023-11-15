@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root{
+    --bg-color: #ffffff;
+    --first-color: #ffffff;
+    --second-color: #444444;
+    --black-color: #000000;
+    --medium-dark: #444444;
+    --icon-bg:#f4f4f4;
+    --mode-color: #cccccc;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body{
+    background: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+body.dark{
+    --bg-color: #242526;
+        --first-color: #ffffff;
+        --second-color: #eeeeee;
+        --black-color: #ffffff;
+        --medium-dark: #242526;
+        --icon-bg: #f4f4f4;
+        --mode-color: #ffffff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+.navbar {
+    position: fixed;
+    top: 15px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 135px;
+    line-height: 100px;
+    z-index: 100;
+}
+.logo span {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--second-color)
+}
+.nav {
+    display: flex;
+    column-gap: 2vw;
+}
+.close_menu {
+    display: none;
+}
+.link_list {
+    display: flex;
+}
+.list {
+   position: relative;
+   list-style: none;
+   margin: 0 30px; 
+}
+.list .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--black-color);
+}
+.link:hover {
+    color: #8759f2;
+}
+@keyframes slideup {
+    from{
+        top: 130px;
+    }
+    top{
+        top: 100px;
+    }
 }
