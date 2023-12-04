@@ -1,12 +1,21 @@
-
+import React from 'react';
 import './App.css';
-import './index.js';
+
+import {useTypewriter, Cursor} from 'react-simple-typewriter';
 function App() {
+  const {multiText} = useTypewriter({
+              words: ['Developer','Designer','Coder'],
+              loop: {},
+              typeSpeed: 100,
+              delaySpeed: 40
+            })
   return (
+    
     <div className="App">
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></link>
       </head>
+      
         <div class="wrapper">
             <nav class="navbar">
                 <div class="logo">
@@ -57,17 +66,23 @@ function App() {
                   </div>
                   <div class="headline">
                     <span class="multiText"></span>
+                    <span style={{fontWeight: 'bold', color: 'geeen'}}>
+                      {multiText}
+                    </span>
+                    <span style={{color:'red'}}>
+                      <Cursor/>
+                    </span>
                   </div>
-                  <div class="hello">
+                  <div class="hello_p">
                     <p>My name is CHANUKA NADUN, I'm web developer with over 1 year experience.</p>
                   </div>
                   <div class="social_icons">
                     <div class="icon_circle"></div>
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#"  class="fa fa-linkedin-square"></a>
-                    <a href="#" class="fa fa-whatsapp"></a>
+                    <a href="#" class="fa fa-facebook icon"></a>
+                    <a href="#" class="fa fa-twitter icon"></a>
+                    <a href="#"  class="fa fa-linkedin-square icon"></a>
+                    <a href="#" class="fa fa-whatsapp icon"></a>
                   </div>
                   <div class="hero_btn">
                     <button class="btn_1">Hire me</button>
@@ -77,10 +92,16 @@ function App() {
               </div>
             </main>
             <div class="images">
-              <img src="" alt="" class="bg"></img>
-              <img src="" alt="" class="boy"></img>
+              <img src="/Bgd_img.jpeg" alt="" class="bg"></img>
+              <img src="/my_img.png" alt="" class="boy"></img>
             </div>
+            
         </div>
+        
+      
+        
+       
+
     </div>
   );
 }

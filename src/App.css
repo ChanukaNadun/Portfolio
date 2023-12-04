@@ -3,7 +3,7 @@
 
 *{
     padding: 0;
-    margin: 0;
+    margin: 5px;
     box-sizing: border-box;
     font-family: "poppins", sans-serif;
 }
@@ -82,4 +82,129 @@ body.dark{
     top{
         top: 100px;
     }
+}
+.btn {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--first-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #8749f2;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.mode {
+    display: flex;
+    align-items: center;
+}
+.moon-sun {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--mode-color);
+}
+.moon-sun :is(#moon,#sun){
+    position: absolute;
+    color: var(--medium-dark);
+    transition: .2s ease-in-out;
+}
+#sun {
+    opacity: 0;
+}
+body.dark #sun {
+    opacity: 1;
+}
+body.dark #moon {
+    opacity: 0;
+}
+.nav_menu_btn {
+    display: none;
+}
+.col {
+    display: flex;
+    width: 60%;
+}
+.col-1 {
+    align-items: center;
+    padding-inline: 4vm 50px;
+    color: var(--second-color);
+    font-size: 20px;
+    margin-top: 250px;
+}
+.hero_box {
+    display: flex;
+    flex-direction: column;
+}
+.hero_box .hello {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.hero_box .hello_p {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+.hero_box .headline {
+    font-size: 45px;
+    font-weight: 700px;
+    color: #8749f2;
+    margin-bottom: 10px;
+}
+.multiText {
+    font-family: sans-serif;
+    color: #8749f2;
+    font-size: 80px;
+    font-weight: 600;
+}
+.social_icons {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: var(--second-color);
+    cursor: pointer;
+    z-index: 0;
+}
+.icon_circle {
+    position: absolute;
+    top: -10px;
+    left: -12px;
+    transform: tramsform(-50%,50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 30px;
+    animation: iconSlide 4s infinite alternate;
+}
+@keyframes iconSlide {
+    25% {
+        border: 2px solid #e6d12e;
+        left: -10px;
+    }
+    50% {
+        border: 2px solid #e5512e;
+        left: 40px;
+    }
+    75% {
+        border: 2px solid #482aa9;
+        left: 90px;
+        }
+    100% {
+        border: 2px solid #b415a2;
+        left: 140px;
+        }
 }
