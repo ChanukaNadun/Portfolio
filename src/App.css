@@ -168,6 +168,7 @@ body.dark #moon {
     position: relative;
     display: flex;
     margin-top: 20px;
+    margin-left: 5px;
 }
 .icon {
     display: flex;
@@ -197,14 +198,53 @@ body.dark #moon {
     }
     50% {
         border: 2px solid #e5512e;
-        left: 40px;
+        left: 50px;
     }
     75% {
         border: 2px solid #482aa9;
-        left: 90px;
+        left: 110px;
         }
     100% {
         border: 2px solid #b415a2;
-        left: 140px;
+        left: 170px;
         }
+}
+.social_icons :hover .icon_circle {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.hero_box .hero_btn{
+    margin-top: 30px;
+}
+.hero_box button {
+    padding: 15px 40px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+.btn_1 {
+    background: #8749f2;
+    color: var(--first-color);
+}
+.btn_2 {
+    margin-left: 1vw;
+}
+.btn_2 a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+.images {
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    bottom: -100px;
+    right: 250px;
+    z-index: 2;
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    z-index: 2;
 }

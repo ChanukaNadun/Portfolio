@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Bgd from './img/Bgd_img.jpg';
+import My from './img/my_img.png';
 
 import {useTypewriter, Cursor} from 'react-simple-typewriter';
 function App() {
@@ -92,8 +94,8 @@ function App() {
               </div>
             </main>
             <div class="images">
-              <img src="/Bgd_img.jpeg" alt="" class="bg"></img>
-              <img src="/my_img.png" alt="" class="boy"></img>
+              <img src={Bgd} height={200} alt="" class="bg"/>
+              <img src={My} alt="" class="boy"/>
             </div>
             
         </div>
